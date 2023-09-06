@@ -19,7 +19,7 @@ const Slides = ({ item }) => {
         <HeightSpacer height={20} />
 
         <ReUsableButton
-          onPress={() => {}}
+          onPress={() => navigation.navigate("Bottom")}
           buttonText={"Let's Go"}
           backgroundColor={COLORS.white}
           borderColor={COLORS.red}

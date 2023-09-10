@@ -1,19 +1,21 @@
 import {
-  FlatList,
   StyleSheet,
+  FlatList,
   Text,
   TouchableOpacity,
   View,
 } from "react-native";
-import React from "react";
-import { useNavigation } from "@react-navigation/native";
-import reusableStyle from "../Reusable/ReUsableStyle.style";
-import ReUsableText from "../Reusable/ReUsableText";
 import { Feather } from "@expo/vector-icons";
-import { COLORS, SIZES, TEXT } from "../../constants/constants";
-import { recommendations } from "../../data";
+import ReUsableText from "../Reusable/ReUsableText";
+import reusableStyle from "../Reusable/ReUsableStyle.style";
 import ReUsableTile from "../Reusable/ReUsableTile";
-const Recommendations = () => {
+import { COLORS, TEXT, SIZES } from "../../constants/constants";
+import React from "react";
+import { recommendations } from "../../data";
+import { useNavigation } from "@react-navigation/native";
+import HotelCard from "../Reusable/HotelCard";
+
+const BestHotels = () => {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
@@ -24,12 +26,12 @@ const Recommendations = () => {
         ]}
       >
         <ReUsableText
-          text={"Recommendations"}
+          text={"Best Resorts"}
           family={"medium"}
           size={TEXT.medium}
           color={COLORS.black}
         />
-        <TouchableOpacity onPress={() => navigation.navigate("Recommended")}>
+        <TouchableOpacity onPress={() => navigation.navigate("BestResort")}>
           <Feather name="list" size={20} />
         </TouchableOpacity>
       </View>
@@ -40,9 +42,9 @@ const Recommendations = () => {
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={{ columnGap: SIZES.medium }}
         renderItem={({ item }) => (
-          <ReUsableTile
+          <HotelCard
             item={item}
-            onPress={() => navigation.navigate("PlaceDetails", item._id)}
+            onPress={() => navigation.navigate("HotelDetails")}
           />
         )}
       />
@@ -50,7 +52,7 @@ const Recommendations = () => {
   );
 };
 
-export default Recommendations;
+export default BestHotels;
 
 const styles = StyleSheet.create({
   container: {

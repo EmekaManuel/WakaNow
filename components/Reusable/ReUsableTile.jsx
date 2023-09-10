@@ -9,10 +9,7 @@ import WidthSpacer from "./WidthSpacer";
 import Rating from "./Rating";
 const ReUsableTile = ({ item, onPress }) => {
   return (
-    <TouchableOpacity
-      onPress={console.log(item.reviews)}
-      style={styles.container}
-    >
+    <TouchableOpacity onPress={onPress} style={styles.container}>
       <View style={reusableStyle.rowWithSpace("flex-start")}>
         <NetworkImage
           source={item.ImageUrl}
@@ -23,7 +20,7 @@ const ReUsableTile = ({ item, onPress }) => {
         <WidthSpacer width={15} />
         <View>
           <ReUsableText
-            text={item.country}
+            text={item.region}
             family={"medium"}
             size={SIZES.medium}
             color={COLORS.black}
@@ -32,7 +29,7 @@ const ReUsableTile = ({ item, onPress }) => {
           <HeightSpacer height={8} />
 
           <ReUsableText
-            text={item.region}
+            text={item.location}
             family={"medium"}
             size={14}
             color={COLORS.gray}

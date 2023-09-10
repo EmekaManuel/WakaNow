@@ -15,7 +15,12 @@ import { useCallback } from "react";
 import { Onboarding, Search } from "./screens";
 import BottomTabNavigation from "./navigation/BottomTabNavigation";
 import CountryDetails from "./components/Details/CountryDetails";
-import { Recommended } from "./components";
+import {
+  HotelDetails,
+  HotelList,
+  PlaceDetails,
+  Recommended,
+} from "./components";
 
 const Stack = createNativeStackNavigator();
 
@@ -64,6 +69,21 @@ export default function App() {
         <Stack.Screen
           name="Recommended"
           component={Recommended}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="PlaceDetails"
+          component={PlaceDetails}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="HotelDetails"
+          component={HotelDetails}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Hotellist"
+          component={HotelList}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

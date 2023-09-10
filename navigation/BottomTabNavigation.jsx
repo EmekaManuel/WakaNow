@@ -27,7 +27,7 @@ const BottomTabNavigation = () => {
   return (
     <Tab.Navigator
       initialRouteName="Home"
-      tabBarOptions={{
+      screenOptions={{
         activeTintColor: "#EB6A58",
         inactiveTintColor: "#3e2465",
         headerShown: false,
@@ -48,7 +48,7 @@ const BottomTabNavigation = () => {
             <Ionicons
               name={focused ? "grid" : "grid-outline"}
               size={24}
-              color={focused ? COLORS.blue : COLORS.gray}
+              color={focused ? COLORS.red : COLORS.gray}
             />
           ),
         }}

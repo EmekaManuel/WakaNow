@@ -12,8 +12,10 @@ import {
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useCallback } from "react";
-import { Onboarding } from "./screens";
+import { Onboarding, Search } from "./screens";
 import BottomTabNavigation from "./navigation/BottomTabNavigation";
+import CountryDetails from "./components/Details/CountryDetails";
+import { Recommended } from "./components";
 
 const Stack = createNativeStackNavigator();
 
@@ -47,6 +49,21 @@ export default function App() {
         <Stack.Screen
           name="Bottom"
           component={BottomTabNavigation}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Search"
+          component={Search}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="CountryDetails"
+          component={CountryDetails}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Recommended"
+          component={Recommended}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

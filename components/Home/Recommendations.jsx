@@ -1,10 +1,4 @@
-import {
-  FlatList,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { FlatList, StyleSheet, TouchableOpacity, View } from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import reusableStyle from "../Reusable/ReUsableStyle.style";
@@ -42,7 +36,7 @@ const Recommendations = () => {
         renderItem={({ item }) => (
           <ReUsableTile
             item={item}
-            onPress={() => navigation.navigate("PlaceDetails", item._id)}
+            onPress={() => navigation.navigate("PlaceDetails", { item })}
           />
         )}
       />

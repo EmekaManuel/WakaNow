@@ -11,7 +11,7 @@ import reusableStyle from "../Reusable/ReUsableStyle.style";
 import ReUsableTile from "../Reusable/ReUsableTile";
 import { COLORS, TEXT, SIZES } from "../../constants/constants";
 import React from "react";
-import { recommendations } from "../../data";
+import { bestHotels } from "../../data";
 import { useNavigation } from "@react-navigation/native";
 import HotelCard from "../Reusable/HotelCard";
 
@@ -26,17 +26,17 @@ const BestHotels = () => {
         ]}
       >
         <ReUsableText
-          text={"Best Resorts"}
+          text={"Best Hotels"}
           family={"medium"}
           size={TEXT.medium}
           color={COLORS.black}
         />
-        <TouchableOpacity onPress={() => navigation.navigate("BestResort")}>
+        <TouchableOpacity onPress={() => navigation.navigate("HotelList")}>
           <Feather name="list" size={20} />
         </TouchableOpacity>
       </View>
       <FlatList
-        data={recommendations}
+        data={bestHotels}
         horizontal
         keyExtractor={(item) => item._id}
         showsHorizontalScrollIndicator={false}
@@ -44,7 +44,7 @@ const BestHotels = () => {
         renderItem={({ item }) => (
           <HotelCard
             item={item}
-            onPress={() => navigation.navigate("HotelDetails")}
+            onPress={() => navigation.navigate("HotelDetails", { item })}
           />
         )}
       />

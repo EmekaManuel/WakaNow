@@ -12,7 +12,7 @@ import {
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useCallback } from "react";
-import { Onboarding, Search } from "./screens";
+import { HotelSearch, Onboarding, Search } from "./screens";
 import BottomTabNavigation from "./navigation/BottomTabNavigation";
 import CountryDetails from "./components/Details/CountryDetails";
 import {
@@ -82,8 +82,13 @@ export default function App() {
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="Hotellist"
+          name="HotelList"
           component={HotelList}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="HotelSearch"
+          component={HotelSearch}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

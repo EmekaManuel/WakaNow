@@ -7,16 +7,19 @@ import { recommendations } from "../../data";
 import ReUsableTile from "../Reusable/ReUsableTile";
 import { useNavigation } from "@react-navigation/native";
 
-const Recommended = ({ navigation }) => {
-  // const navigation = useNavigation();
+const Recommended = () => {
+  const navigation = useNavigation();
   return (
     <SafeAreaView style={{ marginHorizontal: 20 }}>
       <View style={{ height: 50 }}>
         <AppBar
           color={COLORS.lightWhite}
           color1={COLORS.lightWhite}
+          top={10}
+          left={0}
+          right={0}
           title={"Recommendations"}
-          icon={"search1"}
+          icon="search1"
           onPress={() => navigation.goBack()}
           onPress1={() => navigation.navigate("Search")}
         />
@@ -31,7 +34,7 @@ const Recommended = ({ navigation }) => {
             <View style={{ marginBottom: 10 }}>
               <ReUsableTile
                 item={item}
-                onPress={() => navigation.navigate("PlaceDetails", item._id)}
+                onPress={() => navigation.navigate("PlaceDetails", { item })}
               />
             </View>
           )}

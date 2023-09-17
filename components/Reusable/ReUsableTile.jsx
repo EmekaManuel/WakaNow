@@ -20,7 +20,7 @@ const ReUsableTile = ({ item, onPress }) => {
         <WidthSpacer width={15} />
         <View>
           <ReUsableText
-            text={item.region}
+            text={item.title}
             family={"medium"}
             size={SIZES.medium}
             color={COLORS.black}
@@ -38,11 +38,11 @@ const ReUsableTile = ({ item, onPress }) => {
           <HeightSpacer height={8} />
 
           <View style={reusableStyle.rowWithSpace("flex-start")}>
-            <Rating rating={item.ratings} />
+            <Rating rating={item.rating} />
             <WidthSpacer width={5} />
 
             <ReUsableText
-              text={`(${item.reviews})`}
+              text={`(${item.review})`}
               family={"medium"}
               size={14}
               color={COLORS.gray}

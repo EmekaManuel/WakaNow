@@ -13,7 +13,12 @@ import BestHotels from "./Home/BestHotels";
 import HotelCard from "./Reusable/HotelCard";
 import HotelDetails from "./Details/HotelDetails";
 import HotelList from "./Details/HotelList";
+import DescriptionText from "./Reusable/DescriptionText";
+import PopularList from "./Country/PopularList";
 import AppBar from "./Reusable/AppBar";
+import Map from "./Reusable/Map";
+import ReviewList from "./Details/ReviewList";
+import ReviewTile from "./Tiles/ReviewTile";
 export {
   ReUsableText,
   ReUsableButton,
@@ -21,9 +26,14 @@ export {
   PlaceDetails,
   HeightSpacer,
   WidthSpacer,
+  DescriptionText,
+  ReviewList,
+  ReviewTile,
   Rating,
   Recommendations,
+  PopularList,
   AppBar,
+  Map,
   HotelDetails,
   BestHotels,
   HotelList,

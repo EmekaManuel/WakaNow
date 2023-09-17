@@ -21,20 +21,20 @@ const HotelCard = ({ item, margin, onPress }) => {
         <HeightSpacer height={2} />
         <View style={{ padding: 10 }}>
           <ReUsableText
-            text={item.location}
+            text={item.title}
             family={"regular"}
-            size={TEXT.medium}
+            size={TEXT.small}
             color={COLORS.black}
           />
           <HeightSpacer height={5} />
           <ReUsableText
-            text={item.region}
+            text={item.location}
             family={"regular"}
-            size={TEXT.medium}
+            size={TEXT.xSmall}
             color={COLORS.gray}
           />
           <HeightSpacer height={5} />
-          <Rating rating={item.ratings} />
+          <Rating rating={item.rating} />
         </View>
       </View>
     </TouchableOpacity>

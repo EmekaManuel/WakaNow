@@ -20,6 +20,7 @@ import HeightSpacer from "../Reusable/HeightSpacer";
 const PlaceDetails = ({ navigation }) => {
   const route = useRoute();
   const { item } = route.params;
+  console.log(item._id);
   return (
     <ScrollView>
       <View>

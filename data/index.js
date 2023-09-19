@@ -270,7 +270,7 @@ export const recommendations = [
       "Tokyo Tower is a communications and observation tower located in the Minato ward of Tokyo, Japan. It stands 333 meters (1,092 feet) tall and is one of the most recognizable landmarks in Tokyo. The tower is painted white and international orange to comply with air safety regulations and offers panoramic views of the city from its observation decks. Tokyo Tower is often compared to the Eiffel Tower in Paris due to its similar design.",
     contact_id: "13579",
     ImageUrl:
-      "https://images.pexels.com/photos/2156042/pexels-photo-2156042.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "https://images.pexels.com/photos/15829321/pexels-photo-15829321/free-photo-of-clear-sky-over-tokyo-tower.jpeg?auto=compress&cs=tinysrgb&w=800",
     rating: "4.5",
     review: "2800 reviews",
     latitude: "35.658580",
@@ -290,7 +290,7 @@ export const recommendations = [
         _id: 302,
         title: "Shinjuku Gyoen National Garden",
         ImageUrl:
-          "https://images.pexels.com/photos/2270487/pexels-photo-2270487.jpeg?auto=compress&cs=tinysrgb&w=800",
+          "https://images.pexels.com/photos/4627464/pexels-photo-4627464.jpeg?auto=compress&cs=tinysrgb&w=800",
         rating: 4.6,
         review: "1600 reviews",
         location: "Tokyo, Japan",
@@ -305,7 +305,7 @@ export const recommendations = [
       "Big Ben is the nickname for the Great Bell of the clock at the north end of the Palace of Westminster in London, England. The tower that houses Big Ben is officially known as the Elizabeth Tower. It is one of the most famous landmarks in London and is renowned for its accuracy and impressive chimes. Big Ben is an enduring symbol of the city of London and the United Kingdom.",
     contact_id: "24680",
     ImageUrl:
-      "https://images.pexels.com/photos/1463746/pexels-photo-1463746.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "https://images.pexels.com/photos/403756/pexels-photo-403756.jpeg?auto=compress&cs=tinysrgb&w=800",
     rating: "4.6",
     review: "3200 reviews",
     latitude: "51.500729",

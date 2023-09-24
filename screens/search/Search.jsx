@@ -32,7 +32,7 @@ const Search = ({ navigation }) => {
           <Feather size={20} name="search" color={COLORS.white} />
         </TouchableOpacity>
       </View>
-      {searchResult.length != 0 ? (
+      {search.length === 0 ? (
         <View>
           <Image
             style={styles.imageStyle}

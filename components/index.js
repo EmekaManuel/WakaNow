@@ -19,9 +19,11 @@ import AppBar from "./Reusable/AppBar";
 import Map from "./Reusable/Map";
 import ReviewList from "./Details/ReviewList";
 import ReviewTile from "./Tiles/ReviewTile";
+import ReUsableTileHotel from "./Reusable/ReUsableTileHotel";
 export {
   ReUsableText,
   ReUsableButton,
+  ReUsableTileHotel,
   ReUsableTile,
   PlaceDetails,
   HeightSpacer,

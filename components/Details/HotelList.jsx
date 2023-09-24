@@ -3,9 +3,10 @@ import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import AppBar from "../Reusable/AppBar";
 import { COLORS, SIZES } from "../../constants/constants";
-import { recommendations } from "../../data";
+import { bestHotels } from "../../data";
 import ReUsableTile from "../Reusable/ReUsableTile";
 import { useNavigation } from "@react-navigation/native";
+import ReUsableTileHotel from "../Reusable/ReUsableTileHotel";
 
 const HotelList = ({ navigation }) => {
   // const navigation = useNavigation();
@@ -26,15 +27,15 @@ const HotelList = ({ navigation }) => {
       </View>
       <View>
         <FlatList
-          data={recommendations}
+          data={bestHotels}
           keyExtractor={(item) => item._id}
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{ columnGap: SIZES.medium }}
           renderItem={({ item }) => (
             <View style={{ marginBottom: 10 }}>
-              <ReUsableTile
+              <ReUsableTileHotel
                 item={item}
-                onPress={() => navigation.navigate("HotelDetails", item._id)}
+                onPress={() => navigation.navigate("HotelDetails", { item })}
               />
             </View>
           )}
